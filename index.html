@@ -50,7 +50,6 @@
       margin-top: 20px;
     }
 
-    /* Her Photo Style */
     #herPhoto {
       width: 180px;
       height: 180px;
@@ -64,12 +63,11 @@
 
 <body>
 
-  <!-- Background Music -->
-  <audio src="music.mp3" autoplay loop></audio>
+  <!-- Hidden Audio -->
+  <audio id="bgMusic" src="music.mp3" loop></audio>
 
   <div class="box">
 
-    <!-- Her Photo -->
     <img id="herPhoto" src="her.png" alt="My Love">
 
     <h1>Will you be my Valentine Shagun? 💖</h1>
@@ -87,6 +85,7 @@
     const noBtn = document.getElementById("no");
     const yesBtn = document.getElementById("yes");
     const gif = document.getElementById("gif");
+    const music = document.getElementById("bgMusic");
 
     // Move "No" button randomly
     noBtn.addEventListener("mouseover", () => {
@@ -98,10 +97,14 @@
 
     // When Yes is clicked
     yesBtn.addEventListener("click", () => {
-      document.querySelector("h1").innerText = "YAYYY ❤️ I knew it and I am sorry Shagun!!";
+
+      document.querySelector("h1").innerText = "YAYYY ❤️ I knew it Shagun and I am sorry :(!!";
       gif.style.display = "block";
       noBtn.style.display = "none";
       yesBtn.style.display = "none";
+
+      // Play music after click (allowed by browser)
+      music.play();
     });
   </script>
 
