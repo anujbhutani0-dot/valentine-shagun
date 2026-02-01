@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine? ❤️</title>
+
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #F1E6E6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .box {
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      color: #E6005C;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background-color: #FF4D79;
+      color: white;
+    }
+
+    #no {
+      background-color: #999;
+      color: white;
+      position: absolute;
+    }
+
+    #gif {
+      display: none;
+      width: 200px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>Will you be my Valentine Shagun? 💖</h1>
+    <button id="yes">Yes Anuj 😍</button>
+    <button id="no">No I hate you 😢</button>
+    <br>
+    <img id="gif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" />
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+    const gif = document.getElementById("gif");
+
+    // Move "No" button randomly
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    // When Yes is clicked
+    yesBtn.addEventListener("click", () => {
+      document.querySelector("h1").innerText = "YAYYY ❤️ I knew it!!";
+      gif.style.display = "block";
+      noBtn.style.display = "none";
+      yesBtn.style.display = "none";
+    });
+  </script>
+</body>
+</html>
