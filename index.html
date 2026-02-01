@@ -49,38 +49,20 @@
       width: 200px;
       margin-top: 20px;
     }
+
+    /* Her Photo Style */
+    #herPhoto {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #FF4D79;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 
 <body>
-  <div class="box">
-    <h1>Will you be my Valentine Shagun? 💖</h1>
-    <button id="yes">Yes Anuj 😍</button>
-    <button id="no">No I hate you 😢</button>
-    <br>
-    <img id="gif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" />
-  </div>
 
-  <script>
-    const noBtn = document.getElementById("no");
-    const yesBtn = document.getElementById("yes");
-    const gif = document.getElementById("gif");
-
-    // Move "No" button randomly
-    noBtn.addEventListener("mouseover", () => {
-      const x = Math.random() * (window.innerWidth - 100);
-      const y = Math.random() * (window.innerHeight - 50);
-      noBtn.style.left = x + "px";
-      noBtn.style.top = y + "px";
-    });
-
-    // When Yes is clicked
-    yesBtn.addEventListener("click", () => {
-      document.querySelector("h1").innerText = "YAYYY ❤️ I knew it!!";
-      gif.style.display = "block";
-      noBtn.style.display = "none";
-      yesBtn.style.display = "none";
-    });
-  </script>
-</body>
-</html>
+  <!-- Background Music -->
+  <audio src="music.mp3" autoplay loop></audi
